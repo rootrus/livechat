@@ -18,11 +18,11 @@ const runSDK = ({ baseUrl, websiteToken }) => {
     return;
   }
 
-  const chatwootSettings = window.chatwootSettings || {};
-  let locale = chatwootSettings.locale;
-  let baseDomain = chatwootSettings.baseDomain;
+  const livechatSettings = window.livechatSettings || {};
+  let locale = livechatSettings.locale;
+  let baseDomain = livechatSettings.baseDomain;
 
-  if (chatwootSettings.useBrowserLanguage) {
+  if (livechatSettings.useBrowserLanguage) {
     locale = window.navigator.language.replace('-', '_');
   }
 
@@ -30,18 +30,18 @@ const runSDK = ({ baseUrl, websiteToken }) => {
     baseUrl,
     baseDomain,
     hasLoaded: false,
-    hideMessageBubble: chatwootSettings.hideMessageBubble || false,
+    hideMessageBubble: livechatSettings.hideMessageBubble || false,
     isOpen: false,
-    position: chatwootSettings.position === 'left' ? 'left' : 'right',
+    position: livechatSettings.position === 'left' ? 'left' : 'right',
     websiteToken,
     locale,
-    useBrowserLanguage: chatwootSettings.useBrowserLanguage || false,
-    type: getBubbleView(chatwootSettings.type),
-    launcherTitle: chatwootSettings.launcherTitle || '',
-    showPopoutButton: chatwootSettings.showPopoutButton || false,
-    widgetStyle: getWidgetStyle(chatwootSettings.widgetStyle) || 'standard',
+    useBrowserLanguage: livechatSettings.useBrowserLanguage || false,
+    type: getBubbleView(livechatSettings.type),
+    launcherTitle: livechatSettings.launcherTitle || '',
+    showPopoutButton: livechatSettings.showPopoutButton || false,
+    widgetStyle: getWidgetStyle(livechatSettings.widgetStyle) || 'standard',
     resetTriggered: false,
-    darkMode: getDarkMode(chatwootSettings.darkMode),
+    darkMode: getDarkMode(livechatSettings.darkMode),
 
     toggle(state) {
       IFrameHelper.events.toggleBubble(state);
@@ -179,6 +179,6 @@ const runSDK = ({ baseUrl, websiteToken }) => {
   });
 };
 
-window.chatwootSDK = {
+window.livechatSDK = {
   run: runSDK,
 };

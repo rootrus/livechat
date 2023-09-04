@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     hasFbConfigured() {
-      return window.chatwootConfig?.fbAppId;
+      return window.livechatConfig?.fbAppId;
     },
     isActive() {
       const { key } = this.channel;

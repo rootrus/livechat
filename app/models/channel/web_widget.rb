@@ -61,6 +61,7 @@ class Channel::WebWidget < ApplicationRecord
   def web_widget_script
     "
     <script>
+      window.chatfastSettings = {\"position\":\"right\",\"type\":\"expanded_bubble\",\"launcherTitle\":\"Ask us\"};
       (function(d,t) {
         var BASE_URL=\"#{ENV.fetch('FRONTEND_URL', '')}\";
         var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
@@ -69,7 +70,7 @@ class Channel::WebWidget < ApplicationRecord
         g.async = true;
         s.parentNode.insertBefore(g,s);
         g.onload=function(){
-          window.chatwootSDK.run({
+          window.livechatSDK.run({
             websiteToken: '#{website_token}',
             baseUrl: BASE_URL
           })

@@ -726,8 +726,8 @@
         "USER_MESSAGE": "Ćao",
         "AGENT_MESSAGE": "Zdravo"
       },
-      "BRANDING_TEXT": "Pokreće Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings ={options};"
+      "BRANDING_TEXT": "Pokreće {WEBSITE_NAME}",
+      "SCRIPT_SETTINGS": "\n      window.livechatSettings ={options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": "Microsoft",

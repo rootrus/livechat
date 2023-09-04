@@ -1,16 +1,16 @@
 export default {
   computed: {
     hostURL() {
-      return window.chatwootConfig.hostURL;
+      return window.livechatConfig.hostURL;
     },
     vapidPublicKey() {
-      return window.chatwootConfig.vapidPublicKey;
+      return window.livechatConfig.vapidPublicKey;
     },
     enabledLanguages() {
-      return window.chatwootConfig.enabledLanguages;
+      return window.livechatConfig.enabledLanguages;
     },
     isEnterprise() {
-      return window.chatwootConfig.isEnterprise === 'true';
+      return window.livechatConfig.isEnterprise === 'true';
     },
   },
 };

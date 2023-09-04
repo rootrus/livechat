@@ -727,7 +727,7 @@
         "AGENT_MESSAGE": "Hello"
       },
       "BRANDING_TEXT": "Keyrt af Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "SCRIPT_SETTINGS": "\n      window.livechatSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": "Microsoft",

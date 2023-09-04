@@ -63,11 +63,7 @@
             :has-error="$v.credentials.password.$error"
             @input="$v.credentials.password.$touch"
           >
-            <p v-if="!globalConfig.disableUserProfileUpdate">
-              <router-link to="auth/reset/password" class="text-link">
-                {{ $t('LOGIN.FORGOT_PASSWORD') }}
-              </router-link>
-            </p>
+
           </form-input>
           <submit-button
             :disabled="loginApi.showLoading"
@@ -144,10 +140,10 @@ export default {
   computed: {
     ...mapGetters({ globalConfig: 'globalConfig/get' }),
     showGoogleOAuth() {
-      return Boolean(window.chatwootConfig.googleOAuthClientId);
+      return Boolean(window.livechatConfig.googleOAuthClientId);
     },
     showSignupLink() {
-      return parseBoolean(window.chatwootConfig.signupEnabled);
+      return parseBoolean(window.livechatConfig.signupEnabled);
     },
   },
   created() {

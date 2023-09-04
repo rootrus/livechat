@@ -93,7 +93,7 @@ export default {
   mounted() {
     this.initializeColorTheme();
     this.listenToThemeChanges();
-    this.setLocale(window.chatwootConfig.selectedLocale);
+    this.setLocale(window.livechatConfig.selectedLocale);
   },
   methods: {
     initializeColorTheme() {

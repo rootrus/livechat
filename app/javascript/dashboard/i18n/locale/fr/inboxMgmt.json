@@ -726,8 +726,8 @@
         "USER_MESSAGE": "Salut",
         "AGENT_MESSAGE": "Bonjour"
       },
-      "BRANDING_TEXT": "Propulsé par Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "Propulsé par {WEBSITE_NAME}",
+      "SCRIPT_SETTINGS": "\n      window.livechatSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": "Microsoft",
